@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+
+ mongo:
+   image:  mongo
+   ports:
+     -  "27017:27017"
+   container_name:  mongo-docker
+   network_mode:  host
+   volumes:
+     - '/home/data/mysql:/data/db'
+
+ spring:
+   image:  spring
+   build:  movie-service/
+   restart:  always
+   network_mode:  host
+   container_name:  spring-docker2
+   depends_on:
+     -  mongo
+   ports:
+     -  8080:8080
+   expose:
+     -  8080

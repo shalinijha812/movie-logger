@@ -1,0 +1,19 @@
+#server:
+#    port: 8085
+#spring:
+#    datasource:
+#        driver-class-name: com.mysql.jdbc.Driver
+#        password: Wbjee.cgi@2018
+#        url: jdbc:mysql://localhost:3306/Keepnote
+#        username: root
+#    jpa:
+#        generate-ddl: false
+#        hibernate:
+#            ddl-auto: create
+#        openInView: false
+#        show_sql: true
+movieservice:
+  service:
+    exceptionmsg1: "Movie Already Exists"
+    exceptionmsg2: "Movie NotFound"
+    successmsg: "Successfully deleted"
